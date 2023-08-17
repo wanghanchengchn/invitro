@@ -43,7 +43,7 @@ func deployCM(function *common.Function) {
 		"port_forwarding": {"80", "tcp"},
 	}
 
-	resp, err := http.PostForm("http://localhost:9091/registerService", payload)
+	resp, err := http.PostForm("http://10.0.1.1:9091/registerService", payload)
 	if err != nil {
 		log.Fatal("Failed to register a service with the control plane - ", err.Error())
 	}
